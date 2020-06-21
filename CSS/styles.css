@@ -558,6 +558,7 @@ h2 {
   line-height: 24px;
   /* or 200% */
 
+  width: 100%;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -565,6 +566,9 @@ h2 {
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0px;
+}
+.mailing-container {
+  display: flex;
 }
 .email {
   width: 270px;
@@ -576,11 +580,99 @@ h2 {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 16px;
+  background-color: #2f303a;
+  color: rgba(255, 255, 255, 0.4);
 }
 .footer .button {
   margin-top: 34px;
+  display: flex;
+}
+.plane {
+  margin-left: 10px;
+  fill: #ffffff;
+  background-color: #2196f3;
+}
+/* Оформление модального окна */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(225, 225, 225, 0.5);
+}
+.textarea {
+  resize: none;
 }
 
+.form {
+  width: 528px;
+  height: 580px;
+  outline: 1px solid #757575;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+
+  /* position: relative;
+  padding: 40px; */
+}
+.form-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  /* outline: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid #757575;
+}
+
+.form-field input::placeholder {
+  color: #2a2a2a;
+}
+
+/* .group {
+  margin-bottom: 20px;
+} */
+.comment {
+  padding: 8px;
+}
+.rules {
+  color: #2196f3;
+  border-bottom: #2196f3;
+}
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  box-sizing: border-box;
+  cursor: point;
+}
 /* портфолио */
 .button-list a {
   font-weight: 500;
