@@ -130,7 +130,7 @@ info@devstudio.com</a>
               <h3 class="examples-text">ДЕКСТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
             </a>
           </li>
-          <li class="element-list"></li>
+          <li class="element-list">
             <a href=""><img
               src="./images/img2-min.jpg"
               alt="мобильный"
@@ -140,16 +140,14 @@ info@devstudio.com</a>
               <h3 class="examples-text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
             </a>
           </li>
-
-          <li class="element-list"></li>
+          <li class="element-list">
             <a href="">
               <img
               src="./images/img3-min.jpg"
               alt="монитор"
               width="370"
               height="294"/>
-            
-              <h3 class="examples-text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+               <h3 class="examples-text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
             </a>
           </li>
         </ul>
@@ -438,7 +436,7 @@ info@devstudio.com</a>
        <p class="end">2020 | Developed by GoIT Students</p>
           </div>
     </footer>
-  <div class="backdrop" data-modal="">
+  <!-- <div class="backdrop" data-modal="">
     <div class="modal">
       <form class="person-data--form">
   
@@ -464,7 +462,7 @@ info@devstudio.com</a>
           </span>
         </div>
         <!-- 2 вид разметки (альтернативный - вместо див - лейбл) -->
-        <label class="formfield">
+        <!-- <label class="formfield">
           <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
           <span class="form-label">Почта</span>
           <span class="icon">
@@ -494,12 +492,16 @@ info@devstudio.com</a>
         </svg>
       </button>
     </div>
-  </div>
+  </div> --> -->
    
-  <div class="backdrop" data-modal="">
+  <div class="backdrop is-hidden" data-modal="">
   <div class="modal">
     <form class="form js-speaker-form">
       <b class="form-header">Оставьте свои данные, мы вам перезвоним</b>
+      <button class="close-button" data-close-modal="">
+        <svg class="close-icon">
+          <use href="./images/script.svg#icon-cross"></use>
+        </svg>
       <div class="formfield">
         <input class="form-input" type="text" name="name" id="name" placeholder=" ">
         <label class="form-label" for="name">Имя</label>
@@ -525,7 +527,7 @@ info@devstudio.com</a>
         <span class="form-label">Почта</span>
         <span class="icon">
           <svg class="icon-form icon-mail">
-            <use href="./images/symbol-defs.svg#icon-envelope_form"></use>
+            <use href=""></use>
           </svg>
         </span>
       </label>
@@ -538,12 +540,25 @@ info@devstudio.com</a>
         <input type="checkbox" name="topic" value="html" id="html" />
             <label for="html">Согласен с рассылкой и принимаю <a class="rules" href="">Условия договора</a></label>
         </div>
-<button class="close-button" data-close-modal="">
-  <svg class="close-icon">
-    <use href="./images/sprite.svg#icon-cross"></use>
-  </svg>
+
         <button class="button" type="submit">Отправить</button>
         </form>
   </div></div>
+  <script >
+    (() => {
+      document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+
+          e.currentTarget.reset();
+        });
+    })();
+  </script>
+  <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,11 +1,14 @@
 (() => {
-  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-    e.preventDefault();
+  const refs = {
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
+  };
 
-    new FormData(e.currentTarget).forEach((value, name) =>
-      console.log(`${name}: ${value}`),
-    );
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
-    e.currentTarget.reset();
-  });
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+  }
 })();
