@@ -19,9 +19,11 @@
   <body>
     <header class="header-site">
       <div class="container">
-      <nav class=nav>
+     <div class="nav-container"> 
+       <nav class=nav>
+         <div class="logo">
         <a href="index.html" class="logo-web">Web</a>
-        <a href="index.html" class="logo-studio">Studio</a>
+        <a href="index.html" class="logo-studio">Studio</a></div>
         <ul class="site-nav">
          
           <li class="site-nav-list"><a class="site-nav-link current" href="index.html" >
@@ -35,6 +37,7 @@
           </a></li>
         </ul>
       </nav>
+      </div>
       <ul class="adress-nav">
         <li class="item" >
         <a class="" href="">
@@ -57,7 +60,7 @@ info@devstudio.com</a>
       <div class="container-hero">
         <section class="hero-section">
           <h1 class="hero-haeding">эффективные решения для вашего бизнеса</h1>
-          <button class="button" data-open-modal="">Заказать услугу</button>
+          <button class="button" data-modal-open >Заказать услугу</button>
         </section>
       </div>
            <section class="advantages-section">
@@ -428,120 +431,65 @@ info@devstudio.com</a>
             </svg>
           </button>
         </form>
-        <!-- <b>ПОДПИСАТЬСЯ НА РАССЫЛКУ</b>
-        <address class="email">E-mail</address>
-        </div>
-        <a class="button" href="">Подписаться</a> -->
-          
+                  </div>
        <p class="end">2020 | Developed by GoIT Students</p>
-          </div>
-    </footer>
-  <!-- <div class="backdrop" data-modal="">
-    <div class="modal">
-      <form class="person-data--form">
-  
-        <b class="form-header">Оставьте свои данные, мы вам перезвоним</b>
-  
-        <div class="formfield">
-          <input class="form-input" type="text" name="name" id="name" placeholder=" ">
-          <label class="form-label" for="name">Имя</label>
-          <span class="icon">
-            <svg class="icon-form icon-name">
-              <use href="./images/symbol-defs.svg#icon-name_form_icon"></use>
-            </svg>
-          </span>
-        </div>
-  
-        <div class="formfield">
-          <input class="form-input" type="tel" name="phone" id="phone" placeholder=" ">
-          <label class="form-label" for="phone">Телефон</label>
-          <span class="icon">
-            <svg class="icon-form icon-form--phone">
-              <use href="./images/symbol-defs.svg#icon-phone_form_icon"></use>
-            </svg>
-          </span>
-        </div>
-        <!-- 2 вид разметки (альтернативный - вместо див - лейбл) -->
-        <!-- <label class="formfield">
-          <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
-          <span class="form-label">Почта</span>
-          <span class="icon">
-            <svg class="icon-form icon-mail">
-              <use href="./images/symbol-defs.svg#icon-envelope_form"></use>
-            </svg>
-          </span>
-        </label>
-  
-        <div class="comment-field">
-          <textarea class="comment" name="comment" id="comment" rows="10" placeholder="Коментарий"></textarea>
-        </div>
-  
-        <label class="form-checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="agreement-link">Условия
-            договора</a>
-          <input class="checkbox" type="checkbox">
-          <svg class="icon-check">
-            <use href="./images/symbol-defs.svg#icon-check"></use>
-          </svg>
-        </label>
-  
-        <button class="button primary form-button" type="submit">Отправить</button>
-      </form>
-      <button class="close-button" data-close-modal="">
-        <svg class="close-icon">
-          <use href="./images/symbol-defs.svg#icon-close_form_icon"></use>
-        </svg>
-      </button>
-    </div>
-  </div> --> -->
+             </footer>
+<!--Разметка формы и бекдропа-->
    
-  <div class="backdrop is-hidden" data-modal="">
-  <div class="modal">
-    <form class="form js-speaker-form">
+  <div class="backdrop is-hidden" data-modal>
+  <div class="modal" >
+    <form class="form js-speaker-form" action autocomplete="off">
       <b class="form-header">Оставьте свои данные, мы вам перезвоним</b>
-      <button class="close-button" data-close-modal="">
-        <svg class="close-icon">
-          <use href="./images/script.svg#icon-cross"></use>
-        </svg>
-      <div class="formfield">
+     
+      <div class="form-field">
         <input class="form-input" type="text" name="name" id="name" placeholder=" ">
         <label class="form-label" for="name">Имя</label>
         <span class="icon">
-          <svg class="icon-form icon-name">
-            <use href="./images/symbol-defs.svg#icon-name_form_icon"></use>
+          <svg class="icon-form">
+            <use href="/images/symbol-defs.svg#icon-person-black"></use>
           </svg>
         </span>
       </div>
       
-      <div class="formfield">
+      <div class="form-field">
         <input class="form-input" type="tel" name="phone" id="phone" placeholder=" ">
         <label class="form-label" for="phone">Телефон</label>
         <span class="icon">
-          <svg class="icon-form icon-form--phone">
-            <use href="./images/symbol-defs.svg#icon-phone_form_icon"></use>
+          <svg class="icon-form">
+            <use href="/images/symbol-defs.svg#icon-phone-black"></use>
           </svg>
         </span>
       </div>
      
-      <label class="formfield">
+      <label class="form-field">
         <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
         <span class="form-label">Почта</span>
         <span class="icon">
-          <svg class="icon-form icon-mail">
-            <use href=""></use>
+          <svg class="icon-form">
+            <use href="/images/symbol-defs.svg#icon-mail"></use>
           </svg>
         </span>
       </label>
       <div class="form-field">
-        <label for="comment">Оставьте коментарий</label>
-        <textarea class="comment" name="comment" id="comment" rows="8" ></textarea>
+        <label class="comment" for="comment">Комментарий</label>
+        <textarea class="form-input" name="comment" id="comment" rows="4" placeholder=" "></textarea>
       </div>
     
-      <div role="group" class="group">
-        <input type="checkbox" name="topic" value="html" id="html" />
-            <label for="html">Согласен с рассылкой и принимаю <a class="rules" href="">Условия договора</a></label>
+      <div  class="group">
+        <label class="agree" for="html">
+        <input class="visually-hidden" type="checkbox" name="topic" value="html" id="html" />
+            <span class="check">
+              <svg class="icon-check">
+                <use href="/images/symbol-defs.svg#icon-check"></use>
+              </svg></span>
+        <span> Согласен с рассылкой и принимаю</span><a class="rules" href="">Условия договора</a></label>
         </div>
 
-        <button class="button" type="submit">Отправить</button>
+        <button class="button" type="submit"  width="50px" >Отправить</button>
+        <button class="close-button" data-modal-close>
+          <svg class="close-icon">
+            <use href="/images/symbol-defs.svg#icon-cross"></use>
+          </svg>
         </form>
   </div></div>
   <script >
@@ -558,7 +506,8 @@ info@devstudio.com</a>
           e.currentTarget.reset();
         });
     })();
-  </script>
+       
+      </script>
   <script src="./js/modal.js"></script>
   </body>
 </html>
