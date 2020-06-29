@@ -787,7 +787,7 @@ textarea {
   align-items: center;
   cursor: pointer;
 }
-.visually-hidden {
+.is-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
