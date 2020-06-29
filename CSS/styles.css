@@ -793,6 +793,7 @@ textarea {
 }
 .close-button:focus-within {
   outline: none;
+  border: none;
 }
 .visually-hidden {
   position: absolute;
