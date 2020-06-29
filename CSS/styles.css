@@ -791,6 +791,9 @@ textarea {
   align-items: center;
   cursor: pointer;
 }
+.close-button:focus-within {
+  outline: none;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
