@@ -708,6 +708,7 @@ textarea {
 }
 .button {
   display: inline-block;
+  outline: none;
 }
 
 .icon-form {
@@ -775,7 +776,8 @@ textarea {
 }
 .btn {
   width: 200px;
-  transform: translateX(50%);
+  transform: translateX(60%);
+  outline: none;
 }
 
 .close-button {
